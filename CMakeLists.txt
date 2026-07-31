@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 4.0)
+cmake_minimum_required(VERSION 3.25...4.4)
 
 project(tlsf C)
 
@@ -10,5 +10,5 @@ target_sources(tlsf PRIVATE tlsf.c
 
 add_library(tlsf::tlsf ALIAS tlsf)
 
-install(TARGETS tlsf EXPORT tlsf-target FILE_SET HEADERS DESTINATION ${CMAKE_INSTALL_PREFIX}/include/tlsf)
-install(EXPORT tlsf-target DESTINATION ${CMAKE_INSTALL_PREFIX}/lib/cmake/tlsf NAMESPACE tlsf:: FILE tlsfConfig.cmake) 
+install(TARGETS tlsf EXPORT tlsf-target FILE_SET HEADERS DESTINATION include/tlsf)
+install(EXPORT tlsf-target DESTINATION lib/cmake/tlsf NAMESPACE tlsf:: FILE tlsfConfig.cmake) 
